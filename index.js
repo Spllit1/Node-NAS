@@ -25,6 +25,7 @@ app.get('/files', (req, res) => {
     if (err) {
       res.status(500).send('Error reading files');
     } else {
+      console.log(files)
       res.json(files);
     }
   });
@@ -50,7 +51,7 @@ app.post('/rename', express.json(), (req, res) => {
   });
 });
 
-// Route zum Erstellen von Ordnern
+
 app.post('/create-folder', express.json(), (req, res) => {
   const folderName = path.join(__dirname, 'uploads', req.body.folderName);
   fs.mkdir(folderName, (err) => {
