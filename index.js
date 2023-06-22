@@ -92,6 +92,6 @@ app.get('/download/:filename', (req, res) => {
   res.download(path.join(__dirname, 'uploads', req.params.filename));
 });
 
-app.listen(3000, () => {
-  console.log('Server running on port 3000');
+app.listen(80, () => {
+  console.log('Server running on port 80');
 });
