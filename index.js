@@ -4,6 +4,11 @@ const path = require('path');
 const fs = require('fs');
 const app = express();
 
+// definining colors
+FgBlue = "\x1b[34m"
+Reset = "\x1b[0m"
+Bright = "\x1b[1m"
+
 const storage = multer.diskStorage({
   destination: 'uploads/',
   filename: (req, file, cb) => {
@@ -94,5 +99,6 @@ app.get('/download/:filename', (req, res) => {
 });
 
 app.listen(80, () => {
-  console.log('Server running on port 80');
+  console.clear()
+  console.log(FgBlue+Bright+'Server running on port 80 (http://localhost:80)'+Reset);
 });
