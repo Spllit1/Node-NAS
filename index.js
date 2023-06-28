@@ -3,11 +3,13 @@ const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
 const app = express();
+const os = require('os');
 
 // definining colors
 FgBlue = "\x1b[34m"
 Reset = "\x1b[0m"
 Bright = "\x1b[1m"
+FgGreen = "\x1b[32m"
 
 const storage = multer.diskStorage({
   destination: 'uploads/',
@@ -99,6 +101,19 @@ app.get('/download/:filename', (req, res) => {
 });
 
 app.listen(80, () => {
+  const networkInterfaces = os.networkInterfaces();
+  const addresses = [];
+  for (const interfaceName in networkInterfaces) {
+    const interfaces = networkInterfaces[interfaceName];
+    for (const iface of interfaces) {
+      if (iface.family === 'IPv4' && !iface.internal) {
+        addresses.push(iface.address);
+      }
+    }
+  }
   console.clear()
-  console.log(FgBlue+Bright+'Server running on port 80 (http://localhost:80)'+Reset);
+  console.log(FgBlue+Bright+"Server running on port 80 ("+Reset+FgGreen+Bright+"http://localhost:80"+Reset+FgBlue+Bright+")")
+  addresses.forEach((address) => {
+    console.log(FgBlue+Bright+"Host-IP Address: "+Reset+FgGreen+Bright+address+Reset);
+  });
 });
