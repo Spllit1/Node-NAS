@@ -25,4 +25,4 @@ To run the server: `node index.js` <br>
 
 In case you find issues, please report it! And in case you want to contribute to the project, feel free to open a pull request :)
 
-<h1 align="center">Happy coding, Spllit1</h1>
+<h2 align="center">Happy coding, Spllit1</h2>
