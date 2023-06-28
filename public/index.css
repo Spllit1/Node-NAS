@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+body {
+  background: rgb(65, 65, 216);
+}
+
+.ui {
+  width: 50%;
+  margin: auto;
+  padding: 10px;
+}
+
+.text {
+  color: #fff;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.infotext {
+  background-color: black;
+  color: azure;
+  border-radius: 5px;
+  font-family: 'Inconsolata', monospace;
+}
+
+.dark-blue {
+  background-color: darkblue;
+}
+
+.orange {
+  background-color: orange;
+}
+
+#heading {
+  margin-bottom: 0.3vh;
+}
+
+body, html {
+  height: 100%;
+}
+
+*, li {
+  text-align: center;
+  align-items: center;
+}
+
+.file-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.file-list li {
+  display: flex;
+  align-items: center;
+}
+
+.file-list button {
+  margin-left: 10px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.file-list li:nth-child(odd) {
+  background-color: rgba(0, 0, 139, 0.219);
+}
+
+.file-list li:nth-child(even) {
+  background-color: rgba(0, 162, 255, 0.233);
+}
+
+.delete-icon {
+  fill: rgb(194, 74, 74);
+}
+
+.download-icon {
+  fill: green;
+}
+
+.svg {
+  text-align: right;
+  width: 2vw;
+  height: 2vh;
+  margin: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .ui {
+    width: 100%;
+  }
+
+  .svg {
+    width: 4vw;
+    height: 4vh;
+  }
+}
