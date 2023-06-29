@@ -70,14 +70,6 @@ body, html {
   background-color: rgba(0, 162, 255, 0.233);
 }
 
-.delete-icon {
-  fill: rgb(194, 74, 74);
-}
-
-.download-icon {
-  fill: green;
-}
-
 .svg {
   text-align: right;
   width: 2vw;
