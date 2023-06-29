@@ -83,7 +83,9 @@
                   headers: { 'Content-Type': 'application/json' },
                   body: JSON.stringify({ oldName: item.name, newName }),
                 }).then((response) => {
-                  alert(response.statusText);
+                  if(response.statusText!="OK"){
+                    alert(response.statusText);
+                  }
                   fetchAndDisplayFiles();
                 });
               }
@@ -94,7 +96,9 @@
             deleteButton.onclick = () => {
               fetch(`/delete/${encodeURIComponent(item.name)}`, { method: 'DELETE' })
                 .then((response) => {
-                  alert(response.statusText);
+                  if(response.statusText!="OK"){
+                    alert(response.statusText);
+                  }
                   fetchAndDisplayFiles();
                 });
             };
