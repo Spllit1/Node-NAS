@@ -18,11 +18,3 @@ To run the server: `node index.js` <br>
 
 - to view the website on the hosting machine:
   - Go to `localhost:80` on your browser.
-- to view it on any machine in the LAN:
-  - Go to `http://hostnameIP:80` (The hostname IP is displayed in the console)
-
-# Contribute
-
-In case you find issues, please report it! And in case you want to contribute to the project, feel free to open a pull request :)
-
-<h2 align="center">Happy coding, Spllit1</h2>
